@@ -12,6 +12,9 @@ use ImiBorbas\VideoGalleryBundle\Importing\ImportedVideo;
 
 class VideoGalleryUpdater
 {
+    /**
+     * @var \ImiBorbas\VideoGalleryBundle\Importing\VideoImporterFactory
+     */
     private $videoImporterFactory;
 
     /**
