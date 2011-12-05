@@ -4,7 +4,8 @@
     <thead>
         <tr>
             <th>Id</th>
-            <th>Playlistid</th>
+            <th>Video service name</th>
+            <th>Playlist ID</th>
             <th>Name</th>
             <th>Slug</th>
             <th>Actions</th>
@@ -14,11 +15,15 @@
     {% for entity in entities %}
         <tr>
             <td><a href="{{ path('videogallery_admin_edit', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.videoServiceName }}</td>
             <td>{{ entity.playlistId }}</td>
             <td>{{ entity.name }}</td>
             <td>{{ entity.slug }}</td>
             <td>
                 <ul>
+                    <li>
+                        <a href="{{ path('videogallery_list', { 'slug': entity.slug }) }}">show</a>
+                    </li>
                     <li>
                         <a href="{{ path('videogallery_admin_edit', { 'id': entity.id }) }}">edit</a>
                     </li>

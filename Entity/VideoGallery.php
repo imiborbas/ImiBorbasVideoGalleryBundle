@@ -22,6 +22,13 @@ class VideoGallery
     private $id;
 
     /**
+     * @var string $videoServiceName
+     *
+     * @ORM\Column(name="video_service_name", type="string", length=255)
+     */
+    private $videoServiceName;
+
+    /**
      * @var string $playlistId
      *
      * @ORM\Column(name="playlist_id", type="string", length=255)
@@ -45,7 +52,7 @@ class VideoGallery
     /**
      * @var array $videos
      *
-     * @ORM\OneToMany(targetEntity="Video", mappedBy="videoGallery")
+     * @ORM\OneToMany(targetEntity="Video", mappedBy="videoGallery", cascade={"remove"})
      * @ORM\OrderBy({"position" = "ASC"})
      */
     private $videos;
@@ -58,6 +65,26 @@ class VideoGallery
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set videoServiceName
+     *
+     * @param string $videoServiceName
+     */
+    public function setVideoServiceName($videoServiceName)
+    {
+        $this->videoServiceName = $videoServiceName;
+    }
+
+    /**
+     * Get videoServiceName
+     *
+     * @return string
+     */
+    public function getVideoServiceName()
+    {
+        return $this->videoServiceName;
     }
 
     /**

@@ -1,7 +1,11 @@
 parameters:
-#    cube_art_video_gallery.example.class: ImiBorbas\VideoGalleryBundle\Example
+    imi_borbas_video_gallery.video_importer_factory.class: ImiBorbas\VideoGalleryBundle\Importing\DefaultVideoImporterFactory
+    imi_borbas_video_gallery.video_gallery_updater.class: ImiBorbas\VideoGalleryBundle\Updater\VideoGalleryUpdater
 
 services:
-#    cube_art_video_gallery.example:
-#        class: %cube_art_video_gallery.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    imi_borbas_video_gallery.video_importer_factory:
+        class: %imi_borbas_video_gallery.video_importer_factory.class%
+
+    imi_borbas_video_gallery.video_gallery_updater:
+        class: %imi_borbas_video_gallery.video_gallery_updater.class%
+        arguments: [@imi_borbas_video_gallery.video_importer_factory, @doctrine.orm.entity_manager]

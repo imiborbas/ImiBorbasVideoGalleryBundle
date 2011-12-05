@@ -10,6 +10,10 @@ class VideoGalleryType extends AbstractType
     public function buildForm(FormBuilder $builder, array $options)
     {
         $builder
+            ->add('videoServiceName', 'choice', array(
+                'choices'  => array('youtube' => 'YouTube'),
+                'required' => true
+            ))
             ->add('playlistId')
             ->add('name')
             ->add('slug')
