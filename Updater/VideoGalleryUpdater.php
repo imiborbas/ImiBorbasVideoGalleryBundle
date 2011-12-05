@@ -31,6 +31,14 @@ class VideoGalleryUpdater
         $this->entityManager = $entityManager;
     }
 
+    /**
+     * Updates the given VideoGallery with new data fetched from an external API.
+     *
+     * @param VideoGallery $videoGallery       VideoGallery to be updated
+     * @param string       $thumbnailDirectory Target directory for thumbnails
+     * 
+     * @return void
+     */
     public function updateVideoGallery(VideoGallery $videoGallery, $thumbnailDirectory)
     {
         $videoRepository = $this->entityManager->getRepository('ImiBorbasVideoGalleryBundle:Video');
