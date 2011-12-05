@@ -1,0 +1,10 @@
+<h1>{{ videoGallery.name }}</h1>
+
+<ul>
+{% for video in videoGallery.videos %}
+    <li>
+        <p>{{ video.title }}</p>
+        <a href="{{ path('videogallery_show', { 'id': video.id }) }}"><img src="/{{ video.thumbnailUrl }}" /></a>
+    </li>
+{% endfor %}
+</ul>

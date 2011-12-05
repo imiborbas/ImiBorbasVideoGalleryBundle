@@ -1,0 +1,7 @@
+parameters:
+#    cube_art_video_gallery.example.class: ImiBorbas\VideoGalleryBundle\Example
+
+services:
+#    cube_art_video_gallery.example:
+#        class: %cube_art_video_gallery.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,34 @@
+videogallery_admin:
+    pattern:  /
+    defaults: { _controller: "ImiBorbasVideoGalleryBundle:Administration:index" }
+
+videogallery_admin_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ImiBorbasVideoGalleryBundle:Administration:show" }
+
+videogallery_admin_new:
+    pattern:  /new
+    defaults: { _controller: "ImiBorbasVideoGalleryBundle:Administration:new" }
+
+videogallery_admin_create:
+    pattern:  /create
+    defaults: { _controller: "ImiBorbasVideoGalleryBundle:Administration:create" }
+    requirements: { _method: post }
+
+videogallery_admin_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "ImiBorbasVideoGalleryBundle:Administration:edit" }
+
+videogallery_admin_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "ImiBorbasVideoGalleryBundle:Administration:update" }
+    requirements: { _method: post }
+
+videogallery_admin_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "ImiBorbasVideoGalleryBundle:Administration:delete" }
+    requirements: { _method: post }
+
+videogallery_admin_synchronize:
+    pattern:  /admin/update/{id}
+    defaults: { _controller: "ImiBorbasVideoGalleryBundle:Administration:synchronize" }

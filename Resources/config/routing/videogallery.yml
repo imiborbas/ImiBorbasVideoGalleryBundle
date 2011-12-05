@@ -1,0 +1,7 @@
+videogallery_list:
+    pattern:  /{slug}
+    defaults: { _controller: "ImiBorbasVideoGalleryBundle:VideoGallery:list" }
+
+videogallery_show:
+    pattern: /show/{id}
+    defaults: { _controller: "ImiBorbasVideoGalleryBundle:Video:show" }
